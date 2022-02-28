@@ -5,11 +5,6 @@ pipeline {
     }
     agent { label 'docker-in' }
     stages {
-      stage('Clone repo') {
-        steps {
-          git 'https://github.com/kirkse/squid-docker.git'
-        }
-      }
       stage('build images') {
         steps {
           script {
