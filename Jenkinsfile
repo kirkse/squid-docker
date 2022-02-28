@@ -3,7 +3,7 @@ pipeline {
         registry = "caotvo/squid-docker"
         registryCredential = 'dockerhub_id'
     }
-    agent any
+    agent { label 'docker-in' }
     stages {
       stage('Clone repo') {
         steps {
